@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "hashit"
+version = "0.1.0"
+description = "Simple CLI app to generate hashes and encode / decode and unique identifiers"
+authors = ["rrluthi <rrluthi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+cement = "^3.0.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
