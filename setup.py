@@ -11,7 +11,7 @@ f.close()
 setup(
     name='hashit',
     version=VERSION,
-    description='MyApp Does Amazing Things!',
+    description='Hash It encodes, decodes, hashes strings and generates unique identifiers.',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     author='Rudolf Luthi',

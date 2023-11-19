@@ -1,4 +1,4 @@
-# MyApp Does Amazing Things!
+# Hash It 
 
 ## Installation
 
