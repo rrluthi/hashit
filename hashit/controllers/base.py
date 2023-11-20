@@ -13,7 +13,7 @@ class Base(Controller):
         label = 'base'
 
         # text displayed at the top of --help output
-        description = 'Hash It String Encoder/Decoder/Hasher/UUID Generator'
+        description = 'Hash-It String Encoder/Decoder/Hasher/Unique id string Generator'
 
         # text displayed at the bottom of --help output
         epilog = 'Usage: hashit command1 --foo bar'
