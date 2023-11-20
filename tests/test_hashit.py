@@ -1,10 +1,10 @@
 
 from pytest import raises
-from hashit.main import HashItTest
+from sfed.main import SfedTest
 
-def test_hashit():
-    # test hashit without any subcommands or arguments
-    with HashItTest() as app:
+def test_sfed():
+    # test sfed without any subcommands or arguments
+    with SfedTest() as app:
         app.run()
         assert app.exit_code == 0
 
@@ -12,7 +12,7 @@ def test_hashit():
 def test_hashit_debug():
     # test that debug mode is functional
     argv = ['--debug']
-    with HashItTest(argv=argv) as app:
+    with SfedTest(argv=argv) as app:
         app.run()
         assert app.debug is True
 
@@ -20,7 +20,7 @@ def test_hashit_debug():
 def test_command1():
     # test command1 without arguments
     argv = ['command1']
-    with HashItTest(argv=argv) as app:
+    with SfedTest(argv=argv) as app:
         app.run()
         data,output = app.last_rendered
         assert data['foo'] == 'bar'
@@ -29,7 +29,7 @@ def test_command1():
 
     # test command1 with arguments
     argv = ['command1', '--foo', 'not-bar']
-    with HashItTest(argv=argv) as app:
+    with SfedTest(argv=argv) as app:
         app.run()
         data,output = app.last_rendered
         assert data['foo'] == 'not-bar'

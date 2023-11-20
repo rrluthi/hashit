@@ -1,5 +1,5 @@
 from cement import Controller, ex
-from hashit.docs.banner import VERSION_BANNER
+from sfed.docs.banner import VERSION_BANNER
 
 
 class Base(Controller):
@@ -7,12 +7,12 @@ class Base(Controller):
         label = 'base'
 
         # text displayed at the top of --help output
-        description = 'Hash-It String Encoder/Decoder/Hasher/Unique id string Generator'
+        description = 'SFED String Encoder/Decoder/Hasher/Unique id string Generator'
 
         # text displayed at the bottom of --help output
-        epilog = 'Usage: hashit command1 --foo bar'
+        epilog = 'Usage: sfed command1 --foo bar'
 
-        # controller level arguments. ex: 'hashit --version'
+        # controller level arguments. ex: 'sfed --version'
         arguments = [
             ### add a version banner
             (['-v', '--version'],
@@ -27,7 +27,7 @@ class Base(Controller):
     @ex(
         help='example sub command1',
 
-        # sub-command level arguments. ex: 'hashit command1 --foo bar'
+        # sub-command level arguments. ex: 'sfed command1 --foo bar'
         arguments=[
             ### add a sample foo option under subcommand namespace
             (['-f', '--foo'],

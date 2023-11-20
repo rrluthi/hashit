@@ -1,4 +1,4 @@
 
-class HashItError(Exception):
+class SfedError(Exception):
     """Generic errors."""
     pass

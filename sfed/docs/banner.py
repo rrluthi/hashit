@@ -1,5 +1,5 @@
 from cement.utils.version import get_version_banner
-from hashit.core.version import get_version
+from sfed.core.version import get_version
 
 INTRO_BANNER = """
 |=====================================================================|

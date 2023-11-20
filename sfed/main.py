@@ -1,19 +1,19 @@
 
 from cement import App, TestApp, init_defaults
 from cement.core.exc import CaughtSignal
-from .core.exc import HashItError
+from .core.exc import SfedError
 from .controllers.base import Base
 
 # configuration defaults
-CONFIG = init_defaults('hashit')
-CONFIG['hashit']['foo'] = 'bar'
+CONFIG = init_defaults('sfed')
+CONFIG['sfed']['foo'] = 'bar'
 
 
-class HashIt(App):
+class Sfed(App):
     """Hash It primary application."""
 
     class Meta:
-        label = 'hashit'
+        label = 'sfed'
 
         # configuration defaults
         config_defaults = CONFIG
@@ -46,15 +46,15 @@ class HashIt(App):
         ]
 
 
-class HashItTest(TestApp,HashIt):
-    """A subclass of HashIt that is better suited for testing."""
+class SfedTest(TestApp, Sfed):
+    """A subclass of Sfed that is better suited for testing."""
 
     class Meta:
-        label = 'hashit'
+        label = 'sfed'
 
 
 def main():
-    with HashIt() as app:
+    with Sfed() as app:
         try:
             app.run()
 
@@ -66,8 +66,8 @@ def main():
                 import traceback
                 traceback.print_exc()
 
-        except HashItError as e:
-            print('HashItError > %s' % e.args[0])
+        except SfedError as e:
+            print('SfedError > %s' % e.args[0])
             app.exit_code = 1
 
             if app.debug is True:

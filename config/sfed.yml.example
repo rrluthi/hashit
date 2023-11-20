@@ -1,7 +1,7 @@
-### Hash It Configuration Settings
+### SFED Configuration Settings
 ---
 
-hashit:
+sfed:
 
 ### Toggle application level debug (does not toggle framework debugging)
 # debug: false
