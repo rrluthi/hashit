@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-$ pip install -r requirements.txt
+$ poetry install
 
 $ python setup.py install
 ```
@@ -17,16 +17,11 @@ This project includes a number of helpers in the `Makefile` to streamline common
 The following demonstrates setting up and working with a development environment:
 
 ```
-### create a virtualenv for development
-
-$ make virtualenv
-
-$ source env/bin/activate
-
+$ poetry shell 
 
 ### run hashit cli application
 
-$ hashit --help
+$ sfed --help
 
 
 ### run pytest / coverage

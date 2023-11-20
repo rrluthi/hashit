@@ -1,6 +1,5 @@
-
 from setuptools import setup, find_packages
-from hashit.core.version import get_version
+from sfed.core.version import get_version
 
 VERSION = get_version()
 
@@ -9,20 +8,20 @@ LONG_DESCRIPTION = f.read()
 f.close()
 
 setup(
-    name='hashit',
+    name='sfed',
     version=VERSION,
-    description='Hash It encodes, decodes, hashes strings and generates unique identifiers.',
+    description='SFED encodes, decodes, hashes strings and files and generates unique identifiers.',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     author='Rudolf Luthi',
     author_email='rudy@designs-machinations.com',
-    url='https://github.com/rrluthi/hashit/',
+    url='https://github.com/rrluthi/sfed/',
     license='mit',
     packages=find_packages(exclude=['ez_setup', 'tests*']),
-    package_data={'hashit': ['templates/*']},
+    package_data={'sfed': ['templates/*']},
     include_package_data=True,
     entry_points="""
         [console_scripts]
-        hashit = hashit.main:main
+        sfed= sfed.main:main
     """,
 )

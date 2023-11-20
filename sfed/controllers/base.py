@@ -1,11 +1,5 @@
 from cement import Controller, ex
-from cement.utils.version import get_version_banner
-from ..core.version import get_version
-
-VERSION_BANNER = """
-MyApp Does Amazing Things! %s
-%s
-""" % (get_version(), get_version_banner())
+from hashit.docs.banner import VERSION_BANNER
 
 
 class Base(Controller):
@@ -28,7 +22,6 @@ class Base(Controller):
 
     def _default(self):
         """Default action if no sub-command is passed."""
-
         self.app.args.print_help()
 
     @ex(

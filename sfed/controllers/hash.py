@@ -20,6 +20,14 @@ HASH_ALGORITHM = {
 }
 
 
+def hash_file(hash_type: str, file_path: str) -> str:
+    """
+    Hash a file using the given hash type.
+    """
+    with open(file_path, 'rb') as file:
+        return HASH_ALGORITHM[hash_type](file.read()).hexdigest()
+
+
 def hash_string(hash_type: str, hash_string: str) -> str:
     """
     Hash a string using the given hash type.

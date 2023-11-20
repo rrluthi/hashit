@@ -14,8 +14,15 @@ ENCODERS = {
 }
 
 
-def encode_string(input_type: str, input_str: str):
+def encode_file(hash_type: str, input_file: str, output_file: str):
+    """
+    Encode a file using the given input type.
+    """
+    return ENCODERS[hash_type](input_file, output_file)
+
+
+def encode_string(hash_type: str, input_str: str):
     """
     Encode a string using the given input type.
     """
-    return ENCODERS[input_type](input_str)
+    return ENCODERS[hash_type](input_str)

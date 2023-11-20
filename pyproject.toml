@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "hashit"
+name = "sfed"
 version = "0.1.0"
-description = "Simple CLI app to generate hashes and encode / decode and unique identifiers"
+description = "Simple CLI app to generate hashes and encode / decode strings and fiels and create unique identifiers"
 authors = ["rrluthi <rrluthi@gmail.com>"]
 readme = "README.md"
 
@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.12"
 cement = "^3.0.8"
 shortuuid = "^1.0.11"
+nanoid = "^2.0.0"
+setuptools = "^68.2.2"
 
 
 [build-system]
