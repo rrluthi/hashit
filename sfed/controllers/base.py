@@ -1,5 +1,5 @@
 from cement import Controller, ex
-from sfed.docs.banner import VERSION_BANNER
+from sfed.docs.banner import VERSION_BANNER 
 
 
 class Base(Controller):

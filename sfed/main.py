@@ -10,7 +10,7 @@ CONFIG['sfed']['foo'] = 'bar'
 
 
 class Sfed(App):
-    """Hash It primary application."""
+    """SFED primary application."""
 
     class Meta:
         label = 'sfed'
