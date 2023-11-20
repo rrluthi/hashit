@@ -1,4 +1,5 @@
 from base64 import b64decode, b16decode, b32decode, b85decode, b32hexdecode, urlsafe_b64decode
+from binascii import unhexlify
 from typing import Dict, Callable
 
 DECODERS:Dict[str, Callable] = {
@@ -6,6 +7,7 @@ DECODERS:Dict[str, Callable] = {
     'b16': b16decode,
     'b32': b32decode,
     'b85': b85decode,
+    'hex': unhexlify,
     'b32hex': b32hexdecode,
     'urlsafe_b64': urlsafe_b64decode
 }

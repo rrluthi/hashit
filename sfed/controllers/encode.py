@@ -1,4 +1,5 @@
 from base64 import b64encode, b16encode, b32encode, b85encode, b32hexencode, urlsafe_b64encode
+from binascii import hexlify
 from urllib.parse import quote_plus, urlencode
 
 
@@ -8,6 +9,7 @@ ENCODERS = {
     'b64': b64encode,
     'b85': b85encode,
     'url': urlencode,
+    'hex': hexlify,
     'b32hex': b32hexencode,
     'urlsafe_b64': urlsafe_b64encode,
     'quote_plus': quote_plus

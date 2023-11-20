@@ -1,4 +1,6 @@
-# Hash It 
+# SFED
+
+String & File Encode / Decode plus Hashing & Generation of Random Strings
 
 ## Installation
 
