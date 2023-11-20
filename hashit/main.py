@@ -47,7 +47,7 @@ class HashIt(App):
 
 
 class HashItTest(TestApp,HashIt):
-    """A sub-class of HashIt that is better suited for testing."""
+    """A subclass of HashIt that is better suited for testing."""
 
     class Meta:
         label = 'hashit'
